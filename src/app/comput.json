@@ -1,0 +1,54 @@
+{
+  "computs": [
+    {
+      "id": 1,
+      "modele": "Latitude 3500 - 15.6",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": 120.88,
+      "prixVente": 300.1,
+      "dateEntreStock": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "modele": "oscour-3000",
+      "marque": "HP",
+      "type": "Fixe",
+      "category": "Gaming",
+      "prixAchat": 60.88,
+      "prixVente": 1500.1,
+      "dateEntreStock": "2008-12-12T15:45:43.511Z"
+    },
+    {
+      "id": 3,
+      "modele": "sP-12",
+      "marque": "Apple",
+      "type": "Fixe",
+      "category": "Bureautique",
+      "prixAchat": 1500,
+      "prixVente": 14999.99,
+      "dateEntreStock": "2008-12-12T15:45:43.511Z"
+    },
+    {
+      "id": 4,
+      "modele": "Mega-Tabs",
+      "marque": "Asus",
+      "type": "Tablette hybride",
+      "category": "Premier prix",
+      "prixAchat": 188.88,
+      "prixVente": 329.99,
+      "dateEntreStock": "2008-12-12T15:45:43.511Z"
+    },
+    {
+      "modele": "OOOSSSSCCCOOOUUURRR",
+      "marque": "HP",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": 400,
+      "prixVente": "401",
+      "dateAjout": "2020-03-24T14:07:24.191Z",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<h1>Ajoutez un PC</h1>
+
+<form #computForm="ngForm" (ngSubmit)="computAdding()">
+  <div class="form-group">
+    <label for="modele">Modele</label>
+    <input type="text" name="modele" id="modele" class="form-control" required [(ngModel)]="comput.modele" #modele="ngModel">
+    <div [hidden]="modele.valid" class="alert alert-danger">Modele INVALIDE</div>
+  </div>
+
+<ng-container *ngFor="let marque of marques">
+  <div  class="form-group">
+    <input type="radio" id="inputRadio-{{marque}}" [value]="marque" name="marque" required
+    [(ngModel)]="comput.marque" #marque="ngModel">
+    <label for="marque">{{marque}}</label>
+  </div>
+</ng-container>
+<div [hidden]="computForm.controls.marque?.valid" class="alert alert-danger">Marque INVALIDE</div>
+
+
+
+  <div class="form-group">
+    <label for="type">Type</label>
+    <select class="form-control" name="type" id="type" required [(ngModel)]="comput.type" #type="ngModel">
+      <option></option>
+      <option *ngFor="let type of types" [value]="type">{{type}}</option>
+    </select>
+    <div [hidden]="type.valid" class="alert alert-danger">brand INVALIDE</div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <input type="radio" [value]="'Gaming'" name="Category" required [(ngModel)]="comput.category"
+    #category="ngModel"><span> Gaming </span>
+
+    <input type="radio" [value]="'Bureautique'" name="Category" required [(ngModel)]="comput.category"
+    #category="ngModel"><span> Bureautique </span>
+
+    <input type="radio" [value]="'Premier Prix'" name="Category" required [(ngModel)]="comput.category"
+    #category="ngModel"><span> Premier Prix </span>
+
+    <div [hidden]="category.valid" class="alert alert-danger">Category INVALIDE</div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="prixAchat">Prix a l'Achat</label>
+    <input type="number" name="prixAchat" id="prixAchat" class="form-control" required [(ngModel)]="comput.prixAchat" #prixAchat="ngModel">
+    <div [hidden]="prixAchat.valid" class="alert alert-danger">PrixAchat INVALIDE</div>
+  </div>
+
+  <div class="form-group">
+    <label for="prixVente">Prix de Vente</label>
+    <input type="text" name="prixVente" id="prixVente" class="form-control" required [(ngModel)]="comput.prixVente" #prixVente="ngModel">
+    <div [hidden]="prixVente.valid" class="alert alert-danger">Prix de Vente INVALIDE</div>
+  </div>
+
+  <input [disabled]="!computForm.valid" class="btn btn-success" type="submit">
+</form>
+
+
+

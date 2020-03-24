@@ -1,0 +1,28 @@
+<ng-container *ngIf="isLoading === false">
+  <h1> stocks :{{computs.length}}</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Nom</td>
+        <td>rentabilité</td>
+        <td>Options</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="hover" *ngFor="let comput of computs">
+        <u>
+            <td><a [routerLink]="['/computDetails', comput.id]" class=""><h2>{{comput.modele}}</h2></a></td>
+        </u>
+        <td><h2>{{comput.prixVente - comput.prixAchat}} boules</h2></td>
+        <td>
+          <div class="d-flex flex-column">
+            <button class="btn btn-success" [routerLink]="['/editComput', comput.id]" routerLinkActive="active">Edit</button>
+            <button class="btn btn-danger" (click)="deleteComput(comput.id)">Delete</button>
+
+          </div>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
